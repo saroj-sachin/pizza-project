@@ -1,7 +1,9 @@
 # Pizza Sales Analysis with SQL
 
-This project analyzes pizza sales data using MySQL to extract meaningful business insights
+This project analyzes pizza sales data using MySQL to extract meaningful business insights.
+
 The goal is to understand customer behavior, sales trends, and popular menu items to help the business make data-driven decisions.
+
 The final analysis is presented in an interactive dashboard created with Canva.
 
 ## Interactive Dashboard
@@ -14,10 +16,10 @@ The final analysis is presented in an interactive dashboard created with Canva.
 
 ## Dataset
 The dataset consists of four CSV files:
-- **orders.csv**: Contains the date and time for each order placed.
-- **order_details.csv**: Contains the specific pizzas and quantities for each order.
-- **pizzas.csv**: Contains the size and price for each unique pizza ID.
-- **pizza_types.csv**: Contains the category and ingredients for each pizza type.
+- [**orders.csv**](/Datasets/orders.csv): Contains the date and time for each order placed.
+- [**order_details.csv**](/Datasets/order_details.csv): Contains the specific pizzas and quantities for each order.
+- [**pizzas.csv**](/Datasets/pizzas.csv): Contains the size and price for each unique pizza ID.
+- [**pizza_types.csv**](/Datasets/pizza_types.csv): Contains the category and ingredients for each pizza type.
 
 ## Problem Statement & Objectives
 The primary objective of this project was to answer key business questions by analyzing the sales data. The main questions addressed were:
@@ -58,4 +60,46 @@ This project utilized a wide range of SQL concepts, from basic queries to advanc
 - **Category Contribution**: The **Classic** pizza category contributes the most to total revenue, accounting for **26.9%** of sales.
 
 ## SQL Queries
-Each query is documented in the sql_queries.sql file.
+Each query is documented in the [sql_queries](sql_queries.sql) file.
+
+Examples include:
+### Total Revenue Generated
+```sql
+SELECT 
+    ROUND(SUM(pizzas.price * order_details.quantity),2) AS total_sales
+FROM
+    pizzas
+		JOIN
+    order_details ON pizzas.pizza_id = order_details.pizza_id;
+```
+
+### Most Common Pizza Size Ordered
+```sql
+SELECT 
+	pizzas.size, 
+	COUNT(order_details.order_details_id) AS "No. of times ordered" 
+FROM 
+	pizzas 
+		JOIN 
+	order_details ON pizzas.pizza_id = order_details.pizza_id
+GROUP BY size;
+```
+
+### Distribution of orders by hour of the day
+```sql
+SELECT 
+    HOUR(order_time) AS hours, COUNT(order_id) AS order_count
+FROM
+    orders
+GROUP BY (HOUR(order_time))
+ORDER BY HOUR(order_time);
+```
+
+## How To Use
+1. Clone the repo:
+   ```
+   git clone https://github.com/saroj-sachin/pizza-project.git
+   ```
+2. Import the dataset into MySQL
+3. Run queries from [sql_queries](sql_queries.sql)
+4. Explore insights and build a dashboard in a tool like Canva, Tableau, or Power BI.
