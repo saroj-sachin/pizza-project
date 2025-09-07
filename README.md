@@ -1,5 +1,9 @@
 # Pizza Sales Analysis with SQL
 
+<img src="/Screenshots/dashboard_screenshot.gif" width="398.67" height="300">
+
+## Project Overview
+
 This project analyzes pizza sales data using MySQL to extract meaningful business insights.
 
 The goal is to understand customer behavior, sales trends, and popular menu items to help the business make data-driven decisions.
