@@ -1,6 +1,6 @@
 # Pizza Sales Analysis with SQL
 
-<img src="/Screenshots/dashboard_screenshot.gif" width="398.67" height="300">
+<img src="/Screenshots/dashboard_screenshot.gif" width="498.34" height="375"> <img src="/Screenshots/dashboard_screenshot_2.gif" width="498.34" height="375">
 
 ## Project Overview
 
