@@ -111,4 +111,4 @@ ORDER BY HOUR(order_time);
 4. Explore insights and build a dashboard in a tool like Canva, Tableau, or Power BI.
 
 ## Acknowledgements
-This project was created to practice SQL for business analytics and visualize the results in a simple dashboard format. It was inspired by the ["End-to-End SQL Project"](https://www.youtube.com/watch?v=zZpMvAedh_E) tutorial on YouTube. A huge thank you to the creator for providing the dataset and comprehensive guidance.
+This project was created to practice SQL for business analytics and visualize the results in a simple dashboard format. It was inspired by the ["End-to-End SQL Project"](https://www.youtube.com/watch?v=zZpMvAedh_E) tutorial on YouTube. A huge thanks to the creator for providing the dataset and comprehensive guidance.
